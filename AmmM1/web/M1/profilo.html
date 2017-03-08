@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+         <meta charset="utf-8"/>
+        <meta name="author" content="Giuseppe Nobile"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Profilo"/>
+        <meta name='keywords' content="Nerd, social, network, social network, profilo"/>
+        
+        
+        <title>Profilo</title>
+        
+    </head>
+    
+    <body>
+    
+        <h1>Profilo - Nerdbook</h1>
+        
+        <div>
+        <a href="descrizione.html">Vai alla pagina di descrizione</a>
+        </div>
+        <div>
+        <a href="login.html">Vai alla bacheca</a>
+        </div>
+        
+        <h2>Form</h2>    
+            <form name="formprofilo" action="index_submit" method="get" accept-charset="utf-8">
+                    <ul>
+                        <li><label>Nome</label>
+                        <input type="text" name="nome" placeholder="Inserire nome" required></li>
+                        <li><label>Cognome</label>
+                        <input type="text" name="cognome" placeholder="Inserire cognome" required></li>
+                        <li><label>Immagine Profilo</label>
+                        <input type="url" name="url" placeholder="Inserire un url valido" required></li>
+                        <li><label>Frase di presentazione</label></li>
+                        <li><textarea rows='5' cols='20' name='frase' placeholder='Inserie frase di presentazione'></textarea></li>
+                        <li><label>Data di nascita</label>
+                        <input type="date" name="data"></li>
+                        <li><label>Password</label>
+                        <input type="password" name="password" placeholder="inserire password" required></li>
+                        <li><label>Conferma Password</label>
+                        <input type="password" name="password" placeholder="ripetere password" required></li>
+                        <li>
+                        <input type="submit" value="Inserisci"></li>
+                    </ul>
+                </form>
+    </body>
+</html>
