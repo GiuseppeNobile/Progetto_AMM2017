@@ -234,6 +234,7 @@ input[type=text] {
    
    #bachecaTitolo, #loginTitolo, #descrizioneTitolo, #profiloTitolo{
        font-size: 50px;
+       margin-bottom: 0px;
    }
    
 }
@@ -243,6 +244,7 @@ input[type=text] {
    .col-1 {width: 100%;}
    #bachecaTitolo, #loginTitolo, #descrizioneTitolo, #profiloTitolo{
        font-size: 30px;
+       margin-bottom: 0px;
    }
       
    #content{
@@ -263,10 +265,12 @@ input[type=text] {
 /*risoluzione tra 480 e 1024px*/
 @media only screen and (min-width: 480px)
                    and (max-width: 1024px){
-   .col-1 {width: 50%;}
-   .col-2 {width: 50%;}
+   .col-1 {width: 25%;}
+   .col-2 {width: 75%;}
+   
+   #bachecaTitolo, #loginTitolo, #descrizioneTitolo, #profiloTitolo{
+       font-size: 30px;
+       margin-bottom: 0px;
+   }
+   
 }
-
-
-
-
