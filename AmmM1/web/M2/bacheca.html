@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <title>Bacheca</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Giuseppe Nobile"/>
+        <meta name="description" content="Bacheca"/>
+        <meta name='keywords' content="Nerd, social, network, social network, bacheca"/>
+                
+    </head>
+       
+    <body>
+        
+        <header>
+            <div>    
+            <h1 id="bachecaTitolo">Bacheca - Nerdbook</h1>
+            </div>
+            
+            <div>
+            <a href="descrizione.html" class="linksito">Pagina di descrizione</a>
+        
+            <a href="login.html" class="linksito">Login</a>
+        </div>
+        </header>
+       
+            <!-- Sidebar -->
+            <div id="sidebar" style="width:14%">
+                <h2>Persone</h2>
+                <h3>Ainstain</h3>
+                <h3>Djovanni</h3>
+                <h3>Zio Papa'</h3>
+                <h2>Gruppi</h2>
+                <h3>Gatti Dj nel mondo</h3>
+                
+            </div>
+        
+        <!-- contenuto bacheca -->  
+        <div id="content">
+        
+            <!-- form per nuovo post -->
+            <div id="DivPost" style="display: inline-block">
+                <h3>Inserisci un nuovo post</h3>
+                <textarea id="TextPost" rows='4' cols='155' name='post' placeholder='Scrivi qui...'></textarea>
+                <input id="URLPost" type="url" name="url" placeholder="URL" required>
+            </div>
+
+            <!-- PRIMO POST -->
+            <div class="stato">
+                <div class="nomefoto">
+                    <img class="fotoprofilo fotonick" title='djinopic' alt='djino' src='images/djino.png' width="120" height="120">
+                    <h2 class="fotonick">Djino</h2>
+                </div>
+                
+                <!-- Stato -->
+                <div class="post">
+                    <p>MIAO!!!</p>
+                </div>
+            </div>
+
+            <!-- SECONDO POST -->
+            <div class="stato">
+                <div class="nomefoto">
+                    <img class="fotoprofilo fotonick" title='einsteinpic' alt='einstein' src='images/einstein.jpg' width="120" height="120">
+                    <h2 class="fotonick">Ainstain</h2>
+                </div>
+                
+                <!-- Immagine -->
+                <div class="post">
+                    <p><img title='imagelink' alt='linkeinstein' src='http://www.fumettologica.it/wp-content/uploads/2016/08/labadessa-670x335.jpg' width="120" height="120"></p>
+                </div>
+            </div>
+
+            <!-- TERZO POST -->
+            <div class="stato">
+                <div class="nomefoto">
+                    <img class="fotoprofilo fotonick"  title='einsteinpic' alt='einstein' src='images/einstein.jpg' width="200" height="200"> 
+                    <h2 class="fotonick">Djovanni</h2>
+                </div>
+                
+                <!-- Link -->
+                <div class="post">
+                    <p>https://www.w3schools.com/html/default.asp</p> 
+                </div>
+            </div>
+        </div>
+     
+        
+    </body>
+</html>

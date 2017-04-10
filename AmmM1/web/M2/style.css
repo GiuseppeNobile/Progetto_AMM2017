@@ -1,0 +1,272 @@
+/*Attributi generali*/
+body{
+    background-color: #ffffff;
+    color: black;
+    font-family: "arial";
+    text-align: left;
+    margin: 0;
+    
+    }
+
+header{
+    background-color: #046d04; 
+    color: #ffffff;
+    border: 40px;
+    margin: 0px;
+    border-color: #046d04;
+    font-family: "arial";
+    min-height: 21vh;
+    height: 21vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    }
+
+h1{
+    color: white;
+    border-color: #046d04;
+    font-size: 40px;
+}
+
+h2{
+    color: black;
+    font-size: 25px;
+    
+}
+
+h3{
+    color: black;
+    font-size: 15px;
+    
+}
+
+/*stile link*/
+a:link, a:visited {
+                    color: white;
+                    margin: 1px 0px 1px 0px;
+                    padding: 5px 10px;
+                    text-align: center;	
+                    text-decoration: none;
+                    font-family: "arial";
+                    font-weight: bold;
+                    display: inline-table;
+                                        
+                  }
+
+a:hover, a:active {
+    color: red;
+}
+
+/*stile campi di input*/
+input:focus{
+    border: 3px solid green;
+}
+
+textarea:focus{
+    border: 3px solid green;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #046d04;
+    border: none;
+    color: white;
+    padding: 16px 22px;
+    text-decoration: none;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    width: 200px;
+    font-weight: bold;
+}
+
+/*stile post bacheca*/
+.fotonick{
+    display: inline-block;
+}
+
+.nomefoto{
+    background-color: #8de08d;
+}
+
+/*immagini del profilo*/
+.fotoprofilo{
+    width: 60px;
+    height: 60px; 
+}
+
+/*stile sidebar*/
+#sidebar{
+    background-color: #50b750;
+    margin-top: 21vh;
+    border: 5px;
+    float: left;
+    width: 100px;
+    min-height: 79vh;
+    position: fixed;
+    
+    
+}
+
+/*stile content*/
+#content{
+    position: relative;
+    margin: 0 auto 0 200px;
+    padding: 22vh 0 0 0;
+    
+
+}
+
+/*stile del form per pubblicare post in bacheca*/
+#DivPost{
+    margin: 10px;
+    padding: 5px;
+    border: 5px;
+    background-color: #8de08d;
+}
+
+#TextPost, textarea{
+    resize: none;
+    width: 96%;
+}
+
+#URLPost{
+    width: 96%;
+}
+
+/*stile liste*/
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*stile per i form di login e profilo*/
+#formlogin{
+    background-color: #8de08d;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 5px;
+    border: 10px;
+    padding: 22vh 0 0 0;
+}
+
+#formprofilo{
+    background-color: #8de08d;  
+    border-radius: 5px;
+    border: 10px;
+    position: relative;
+    margin: 0 auto 0 200px;
+    padding: 22vh 0 0 0;
+}
+
+/*stile campi di input*/
+input[type=email] {
+    width: 96%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=password] {
+    width: 96%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    width: 96%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/*stile della barra URL del profilo*/
+#URLProfilo{
+    width: 96%;
+    height: 40px;
+}
+
+/*stili delle classi della bacheca*/
+.stato{
+    margin: 10px;
+    padding: 5px;
+    border: 5px;
+    background-color: #b5fcb5;
+
+}
+
+.post {
+    display: table;
+    margin: 0 auto;
+    font-family: "arial";
+    font-size: 20px;
+    
+}
+
+.linksito{
+    margin-top: 9%;
+    margin-bottom: 9%;
+    border: 2px;
+    float: right;
+    display: inline-block;
+}
+
+/*CSS Responsive*/
+*{
+   box-sizing: border-box;
+ }
+[class*="col-"] {
+    float: left;
+    padding: 2px;
+} 
+
+.col-1 {width: 25%;}
+.col-2 {width: 75%;}
+
+/*risoluzione a 1024px e maggiori*/
+@media only screen and (min-width: 1024px){
+   .col-1 {width: 25%;}
+   .col-2 {width: 75%;}
+   
+   #bachecaTitolo, #loginTitolo, #descrizioneTitolo, #profiloTitolo{
+       font-size: 50px;
+   }
+   
+}
+
+/* risoluzione a 480 px e minore*/
+@media only screen and (max-width: 480px){
+   .col-1 {width: 100%;}
+   #bachecaTitolo, #loginTitolo, #descrizioneTitolo, #profiloTitolo{
+       font-size: 30px;
+   }
+      
+   #content{
+       margin: 2px;
+       
+   }
+    
+   #sidebar{
+       display: none;
+   }
+   
+      
+   #formlogin, #formprofilo{
+       margin: 0px;
+   }
+}
+ 
+/*risoluzione tra 480 e 1024px*/
+@media only screen and (min-width: 480px)
+                   and (max-width: 1024px){
+   .col-1 {width: 50%;}
+   .col-2 {width: 50%;}
+}
+
+
+
+
