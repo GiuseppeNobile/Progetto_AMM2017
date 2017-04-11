@@ -133,6 +133,10 @@ input[type=button], input[type=submit], input[type=reset] {
     width: 96%;
 }
 
+#bottonePubblica{
+    margin-top: 10px;
+}
+
 /*stile liste*/
 ul{
     list-style-type: none;
