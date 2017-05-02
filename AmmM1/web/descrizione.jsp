@@ -1,5 +1,11 @@
-<!DOCTYPE html>
+<%-- 
+    Document   : descrizione
+    Created on : 27-apr-2017, 18.20.44
+    Author     : Giuseppe Nobile
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
@@ -21,7 +27,7 @@
         </div>
         
         <div>
-            <a href="login.html" class="linksito">Login</a>
+            <a href="login.jsp" class="linksito">Login</a>
         </div>
     </header>
         
@@ -33,3 +39,4 @@
         </div>
     </body>
 </html>
+

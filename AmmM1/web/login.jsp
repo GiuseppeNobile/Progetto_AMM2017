@@ -1,5 +1,11 @@
-<!DOCTYPE html>
+<%-- 
+    Document   : login
+    Created on : 27-apr-2017, 18.21.18
+    Author     : Giuseppe Nobile
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
@@ -20,11 +26,11 @@
             
             <div>
                 
-                <a href="descrizione.html" class="linksito">Pagina di descrizione</a>
+                <a href="descrizione.jsp" class="linksito">Pagina di descrizione</a>
 
-                <a href="profilo.html" class="linksito">Profilo</a>
+                <a href="profilo.jsp" class="linksito">Profilo</a>
 
-                <a href="bacheca.html" class="linksito">Bacheca</a>
+                <a href="bacheca.jsp" class="linksito">Bacheca</a>
             </div>
         </header>
         
@@ -45,3 +51,4 @@
     
 
 </html>
+

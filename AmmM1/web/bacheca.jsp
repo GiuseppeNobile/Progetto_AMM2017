@@ -1,3 +1,10 @@
+<%-- 
+    Document   : bacheca
+    Created on : 27-apr-2017, 17.53.52
+    Author     : Giuseppe Nobile
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
@@ -20,28 +27,21 @@
             </div>
             
             <div>
-            <a href="descrizione.html" class="linksito">Pagina di descrizione</a>
+            <a href="descrizione.jsp" class="linksito">Pagina di descrizione</a>
         
-            <a href="login.html" class="linksito">Login</a>
+            <a href="login.jsp" class="linksito">Login</a>
         </div>
         </header>
        
-            <!-- Sidebar -->
-            <div id="sidebar" style="width:14%">
-                <h2>Persone</h2>
-                <h3>Ainstain</h3>
-                <h3>Djovanni</h3>
-                <h3>Zio Papa'</h3>
-                <h2>Gruppi</h2>
-                <h3>Gatti Dj nel mondo</h3>
-                
-            </div>
+        <!-- Sidebar -->
+        <jsp:include page="sidebar.jsp"/>
+        
         
         <!-- contenuto bacheca -->  
         <div id="content">
         
             <!-- form per nuovo post -->
-            <div id="DivPost" style="display: inline-block">
+            <div id="newpost" style="display: inline-block">
                 <h3>Inserisci un nuovo post</h3>
                 <textarea id="TextPost" rows='4' cols='155' name='post' placeholder='Scrivi qui...'></textarea>
                 <input id="URLPost" type="url" name="url" placeholder="URL" required>
@@ -90,4 +90,3 @@
      
         
     </body>
-</html>

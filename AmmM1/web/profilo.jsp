@@ -1,5 +1,11 @@
-<!DOCTYPE html>
+<%-- 
+    Document   : profilo
+    Created on : 27-apr-2017, 18.22.06
+    Author     : Giuseppe Nobile
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
     
     <head>
@@ -26,23 +32,17 @@
         
             <div>
                 
-                <a href="descrizione.html" class="linksito">Pagina di descrizione</a>
+                <a href="descrizione.jsp" class="linksito">Pagina di descrizione</a>
             
-                <a href="bacheca.html" class="linksito">Bacheca</a>
+                <a href="bacheca.jsp" class="linksito">Bacheca</a>
             </div>
         </header>
         
+        
         <!-- Sidebar -->
-        <div id="sidebar" style="width:14%">
-            <h2>Persone</h2>
-            <h3>Ainstain</h3>
-            <h3>Djovanni</h3>
-            <h3>Zio Papa'</h3>
-            <h2>Gruppi</h2>
-            <h3>Gatti Dj nel mondo</h3>
-
-        </div>
-             
+        <jsp:include page="sidebar.jsp"/>
+        
+                     
         <div id="formprofilo">
             <form name="formprofilo" action="index_submit" method="get" accept-charset="utf-8">
                 <ul>
@@ -66,3 +66,4 @@
         </div>
     </body>
 </html>
+
