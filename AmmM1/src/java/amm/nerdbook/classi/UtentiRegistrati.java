@@ -1,4 +1,4 @@
-package classi;
+package amm.nerdbook.classi;
 
 /**
  *

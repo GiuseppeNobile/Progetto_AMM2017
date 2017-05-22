@@ -1,0 +1,37 @@
+﻿ENTITA' INDIVIDUATE
+
+1. UTENTI
+	1. ID
+	2. nome
+	3. cognome
+
+2. POST
+	1. ID
+	2. contenuto
+	3. autore
+	4. allegato
+
+3. GRUPPI
+	1. ID
+	2. nome gruppo
+	3. descrizione
+	4. numero membri
+	5. admin
+
+RELAZIONI TRA LE ENTITA'
+
+- utenti → post         
+	per ogni utente quanti post? MOLTI
+	per ogni post quanti utenti? UNO
+1 a MOLTI
+
+- utenti → gruppi     
+	ogni utente a quanti gruppi può iscriversi? MOLTI
+	ogni gruppo, quanti utenti contiene? MOLTI 
+MOLTI a MOLTI
+
+- post → gruppi       
+	ogni gruppo quanti post contiene? MOLTI
+	ogni post in quanti gruppi può essere? UNO
+
+1 a MOLTI

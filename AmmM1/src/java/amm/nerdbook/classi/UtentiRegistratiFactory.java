@@ -1,4 +1,4 @@
-package classi;
+package amm.nerdbook.classi;
 
 import java.util.ArrayList;
 
@@ -8,6 +8,7 @@ import java.util.ArrayList;
  */
 public class UtentiRegistratiFactory {
     
+    String connectionString;
     private static UtentiRegistratiFactory singleton;
     
     public static UtentiRegistratiFactory getInstance() {
@@ -16,6 +17,8 @@ public class UtentiRegistratiFactory {
         }
         return singleton;
     }
+    
+    
     
     private ArrayList<UtentiRegistrati> listaUtenti = new ArrayList<UtentiRegistrati>();
 
@@ -54,5 +57,14 @@ public class UtentiRegistratiFactory {
             }
         }
         return null;
+    }
+    
+    //task 3 milestone 4
+    public void setConnectionString(String s){
+	this.connectionString = s;
+    }
+    
+    public String getConnectionString(){
+	return this.connectionString;
     }
 }

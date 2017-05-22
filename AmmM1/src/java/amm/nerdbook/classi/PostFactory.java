@@ -1,14 +1,15 @@
-package classi;
+package amm.nerdbook.classi;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import amm.nerdbook.classi.UtentiRegistratiFactory;
 /**
  *
  * @author Giuseppe Nobile
  */
 public class PostFactory {
     
+    String connectionString;
     private static PostFactory singleton;
     
     public static PostFactory getInstance() {
@@ -69,5 +70,14 @@ public class PostFactory {
             }
         }
         return listaPost;
+    }
+    
+    //task 3 milestone 4
+    public void setConnectionString(String s){
+	this.connectionString = s;
+    }
+    
+    public String getConnectionString(){
+	return this.connectionString;
     }
 }

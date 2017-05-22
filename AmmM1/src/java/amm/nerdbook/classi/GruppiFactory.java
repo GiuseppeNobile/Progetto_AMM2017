@@ -1,4 +1,4 @@
-package classi;
+package amm.nerdbook.classi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class GruppiFactory {
     
+    String connectionString;
     private static GruppiFactory singleton;
     
     public static GruppiFactory getInstance() {
@@ -43,4 +44,12 @@ public class GruppiFactory {
         return null;
     }
     
+    //task 3 milestone 4
+    public void setConnectionString(String s){
+	this.connectionString = s;
+    }
+    
+    public String getConnectionString(){
+	return this.connectionString;
+    }   
 }

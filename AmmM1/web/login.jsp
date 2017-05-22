@@ -35,12 +35,14 @@
         </header>
         
         <div id="formlogin">
-            <form name="login" action="index_submit" method="get" accept-charset="utf-8">
+            <form name="login" action="Login" method="post" accept-charset="utf-8">
                 <ul>
                     <li><label class="label">Email</label>
                     <input type="email" name="usermail" placeholder="Inserire email" required id="login"></li>
+                    <li><label class="label">Username</label>
+                    <input type="username" name="username" placeholder="Inserire username" required id="login"></li>
                     <li><label class="label">Password</label>
-                    <input type="password" name="password" placeholder="inserire password" required id="password"></li>
+                    <input type="password" name="password" placeholder="Inserire password" required id="password"></li>
                     
                     <li><input type="submit" value="Login"></li>
                 </ul>

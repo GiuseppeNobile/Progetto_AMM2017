@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package amm.nerdbook;
 
 import amm.nerdbook.classi.*;
@@ -12,20 +7,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.annotation.WebServlet;
 
 /**
  *
  * @author Giuseppe Nobile
  */
 
-public class Login extends HttpServlet {
+@WebServlet(name = "Login", urlPatterns = {"/login.jsp"}, loadOnStartup = 0)
 
+public class Login extends HttpServlet {
+      
+    private static final String JDBC_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+    private static final String DB_CLEAN_PATH = "../../web/WEB-INF/db/ammdb";
+    private static final String DB_BUILD_PATH = "WEB-INF/db/ammdb";
+    
+    String username;
+    String password;
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException{
             response.setContentType("text/html;charset=UTF-8");
             
+            //creazione della sessione
             HttpSession session = request.getSession();
-            
+                       
             if(request.getParameter("logout")!= null){
             
                 session.invalidate();
@@ -34,17 +40,21 @@ public class Login extends HttpServlet {
             }
             
             if(session.getAttribute("loggedIn") != null &&
-               session.getAttribute("loggedIn").equals(true)) {
+               session.getAttribute("loggedIn").equals(true)){
             
                 request.getRequestDispatcher("Bacheca").forward(request, response);
-                return;
+                
                 
             }else{
                 
-                String username = request.getParameter("username");
-                String password = request.getParameter("password");
+                
+                username = request.getParameter("username");
+                password = request.getParameter("password");
                 
             
             }
         }
+    
+    
+
 }
