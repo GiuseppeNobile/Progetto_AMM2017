@@ -7,6 +7,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    <head>
+        <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="js/jjavascript.js"></script>
+    </head>
+    
     <body>
     <!-- Sidebar -->
         <div id="sidebar" style="width:14%">

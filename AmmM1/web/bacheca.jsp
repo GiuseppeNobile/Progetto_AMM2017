@@ -16,7 +16,8 @@
         <meta name="author" content="Giuseppe Nobile"/>
         <meta name="description" content="Bacheca"/>
         <meta name='keywords' content="Nerd, social, network, social network, bacheca"/>
-                
+        <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="js/jjavascript.js"></script>
     </head>
        
     <body>

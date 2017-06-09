@@ -15,8 +15,10 @@
         <meta name="description" content="Pagina di login">
         <meta name="keywords" content="Login, Social,, Network">
         <meta name="author" content="Giuseppe Nobile">
-        
+        <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="js/jjavascript.js"></script>
     </head>
+    
     <body>
         <header>
             <div>

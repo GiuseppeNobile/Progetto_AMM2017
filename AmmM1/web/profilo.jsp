@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : profilo
     Created on : 27-apr-2017, 18.22.06
     Author     : Giuseppe Nobile
@@ -16,7 +16,8 @@
         <meta name="description" content="Profilo"/>
         <meta name='keywords' content="Nerd, social, network, social network, profilo"/>
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-        
+        <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="js/jjavascript.js"></script>
         
         <title>Profilo</title>
         
