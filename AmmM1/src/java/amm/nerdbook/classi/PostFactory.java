@@ -60,7 +60,7 @@ public class PostFactory {
         return null;
     }
     
-    List<Post> getPostList(UtentiRegistrati utente){
+    public List<Post> getPostList(UtentiRegistrati utente){
     
         for(Post post : this.listaPost){
         

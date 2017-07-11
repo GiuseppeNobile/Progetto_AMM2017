@@ -9,11 +9,11 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-     <title>Login</title>
+        <title>Login</title>
         <meta charset="UTF-8">        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Pagina di login">
-        <meta name="keywords" content="Login, Social,, Network">
+        <meta name="keywords" content="Login, Social, Network">
         <meta name="author" content="Giuseppe Nobile">
         <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
         <script type="text/javascript" src="js/jjavascript.js"></script>
