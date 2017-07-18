@@ -1,8 +1,12 @@
 package amm.nerdbook.classi;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import amm.nerdbook.classi.UtentiRegistratiFactory;
+
 /**
  *
  * @author Giuseppe Nobile
@@ -19,36 +23,11 @@ public class PostFactory {
         return singleton;
     }
     
-    private ArrayList<Post> listaPost = new ArrayList<Post>();
+    private ArrayList<Post> listaPost = new ArrayList<>();
 
 //creazione post
     private PostFactory(){
-        
-        //Primo post
-        Post post1 = new Post();
-        post1.setId(0);
-        post1.setUtente(UtentiRegistratiFactory.getInstance().getUtenteById(0));
-        post1.setContenuto("MIAO!");
-        
-        
-        //Secondo post
-        Post post2 = new Post();
-        post2.setId(1);
-        post2.setUtente(UtentiRegistratiFactory.getInstance().getUtenteById(1));
-        post2.setContenuto("http://www.fumettologica.it/wp-content/uploads/2016/08/labadessa-670x335.jpg");
-        post2.setPostTipo(Post.Tipo.IMAGE);
-        
-        //Terzo post
-        Post post3 = new Post();
-        post3.setId(2);
-        post3.setUtente(UtentiRegistratiFactory.getInstance().getUtenteById(2));
-        post3.setContenuto("https://www.w3schools.com/html/default.asp");
-        post3.setPostTipo(Post.Tipo.TEXT);
-    
-    
-    listaPost.add(post1);
-    listaPost.add(post2);
-    listaPost.add(post3);
+
     }
     
     public Post getPostById(int id) {
@@ -79,5 +58,48 @@ public class PostFactory {
     
     public String getConnectionString(){
 	return this.connectionString;
+    }
+    
+    public void addNewPost(Post post){
+        try {
+            
+            Connection conn = DriverManager.getConnection(connectionString, "utente", "utente");
+            
+            String query = 
+                      "insert into posts (post_id, content, type, author) "
+                    + "values (default, ? , ? , ? )";
+            
+            
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            stmt.setString(1, post.getContenuto());
+
+            stmt.setInt(2, this.postTypeFromEnum(post.getPostTipo()));
+            
+            stmt.setInt(3, post.getUtente().getId());
+            
+            
+            stmt.executeUpdate();
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+       
+    }
+    
+    private Post.Tipo postTipoFromString(String tipo){
+        
+        if(tipo.equals("IMAGE"))
+            return Post.Tipo.IMAGE;
+        
+        return Post.Tipo.TEXT;
+    }
+    
+    private int postTypeFromEnum(Post.Tipo tipo){
+        //È realizzabile in modo più robusto rispetto all'hardcoding degli indici
+        if(tipo == Post.Tipo.TEXT)
+                return 1;
+            else
+                return 2;
     }
 }
