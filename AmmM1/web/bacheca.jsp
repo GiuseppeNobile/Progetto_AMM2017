@@ -28,6 +28,8 @@
             </div>
             
             <div>
+            <a href="cercaamici.jsp" class="linksito">Cerca Amici</a>
+            
             <a href="descrizione.jsp" class="linksito">Pagina di descrizione</a>
         
             <a href="login.jsp" class="linksito">Login</a>

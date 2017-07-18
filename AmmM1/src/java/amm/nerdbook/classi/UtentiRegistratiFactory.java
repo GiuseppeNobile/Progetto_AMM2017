@@ -1,7 +1,12 @@
 package amm.nerdbook.classi;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
-
+import java.util.List;
 /**
  *
  * @author Giuseppe Nobile
@@ -25,29 +30,6 @@ public class UtentiRegistratiFactory {
 //creazione utenti
     private UtentiRegistratiFactory(){
         
-        //Djino
-        UtentiRegistrati utente1 = new UtentiRegistrati();
-        utente1.setId(0);
-        utente1.setNome("Djino");
-        utente1.setEmail("djino_the_cat@purrmail.com");
-        utente1.setPassword("miaomiao");
-        utente1.setUrlFoto("images/djino.png");
-        
-        //Djovanni
-        UtentiRegistrati utente2 = new UtentiRegistrati();
-        utente2.setId(1);
-        utente2.setNome("Djovanni");
-        utente2.setEmail("dj.ovanni@gmail.com");
-        utente2.setPassword("ovanni");
-        utente2.setUrlFoto("images/einstein.jpg");
-        
-        //Ainstain
-        UtentiRegistrati utente3 = new UtentiRegistrati();
-        utente3.setId(2);
-        utente3.setNome("Ainstain");
-        utente3.setEmail("best_physician_eva@gmail.com");
-        utente3.setPassword("mcalquadrato");
-        utente3.setUrlFoto("images/einstein.jpg");
     }
     
     public UtentiRegistrati getUtenteById(int id) {
@@ -59,12 +41,51 @@ public class UtentiRegistratiFactory {
         return null;
     }
     
-    //task 3 milestone 4
+    
     public void setConnectionString(String s){
 	this.connectionString = s;
     }
     
     public String getConnectionString(){
 	return this.connectionString;
+    }
+    
+    
+    public List getUtentiList() {
+        List<UtentiRegistrati> listaUtenti = new ArrayList<>();
+        
+        try {
+            // path, username, password
+            Connection conn = DriverManager.getConnection(connectionString, "username", "password");
+            
+             String query = 
+                      "select * from utenti";
+            
+            // Prepared Statement
+            PreparedStatement stmt = conn.prepareStatement(query);
+            
+            // Esecuzione query
+            ResultSet res = stmt.executeQuery();
+
+            // ciclo sulle righe restituite
+            while (res.next()) {
+                UtentiRegistrati current = new UtentiRegistrati();
+                current.setId(res.getInt("id"));
+                current.setNome(res.getString("nome"));
+                current.setEmail(res.getString("cognome"));
+                current.setEmail(res.getString("email"));
+                current.setPassword(res.getString("password"));
+                current.setUrlFoto(res.getString("urlFoto"));
+                
+                listaUtenti.add(current);
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (SQLException e){
+        
+        }
+        
+        return listaUtenti;
     }
 }
